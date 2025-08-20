@@ -7,7 +7,6 @@ const images = [
   "/event5.jpg",
   "/event6.jpg",
   "/event1.jpg",
-  "/event7.jpg",
   "/event8.jpg",
   "/event10.jpg",
   "/event11.jpg",
@@ -39,7 +38,7 @@ const images = [
   "/event46.jpg",
   "/event47.jpg",
   "/event48.jpg",
-   "/event7 (2).jpg",
+  "/event7 (2).jpg", // ← Don't forget to add your new image!
 ]
 
 // Function to shuffle array randomly
@@ -66,7 +65,7 @@ export default function Slideshow() {
     
     const timer = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % shuffledImages.length)
-    }, 5000)
+    }, 3000) // ← CHANGED TO 3000ms (3 seconds)
 
     return () => clearInterval(timer)
   }, [shuffledImages])
