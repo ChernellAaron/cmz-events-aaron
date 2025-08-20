@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.cmzevents.co.za/</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/about</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/services</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/services/sound-equipment</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/services/dj-services</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/services/lighting</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/services/microphones</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cmzevents.co.za/contact</loc>
+    <lastmod>2025-05-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
