@@ -7,6 +7,7 @@ const images = [
   "/event5.jpg",
   "/event6.jpg",
   "/event1.jpg",
+  "/event7.jpg",
   "/event8.jpg",
   "/event10.jpg",
   "/event11.jpg",
@@ -38,6 +39,7 @@ const images = [
   "/event46.jpg",
   "/event47.jpg",
   "/event48.jpg",
+   "/event7 (2).jpg",
 ]
 
 // Function to shuffle array randomly
