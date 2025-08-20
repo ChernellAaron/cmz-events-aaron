@@ -1,6 +1,7 @@
 import type React from "react"
 import { Inter } from "next/font/google"
-import Navbar from "@/components/Navbar"  // Changed from Header to Navbar
+import Navbar from "@/components/Navbar"
+import { Analytics } from "@vercel/analytics/react"  // ← Added import
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -23,7 +24,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={inter.className}>
-        <Navbar />  {/* Replaced Header with new Navbar component */}
+        <Navbar />
         <main className="container mx-auto px-4 py-6 md:py-8 w-full">
           {children}
         </main>
@@ -49,6 +50,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />  {/* ← Added Analytics component here */}
       </body>
     </html>
   )
