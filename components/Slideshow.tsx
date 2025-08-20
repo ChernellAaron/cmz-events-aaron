@@ -40,21 +40,51 @@ const images = [
   "/event48.jpg",
 ]
 
+// Function to shuffle array randomly
+const shuffleArray = (array: string[]) => {
+  const newArray = [...array]
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[newArray[i], newArray[j]] = [newArray[j], newArray[i]]
+  }
+  return newArray
+}
+
 export default function Slideshow() {
+  const [shuffledImages, setShuffledImages] = useState<string[]>([])
   const [currentImage, setCurrentImage] = useState(0)
 
+  // Shuffle images on component mount
   useEffect(() => {
+    setShuffledImages(shuffleArray(images))
+  }, [])
+
+  useEffect(() => {
+    if (shuffledImages.length === 0) return
+    
     const timer = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length)
+      setCurrentImage((prevImage) => (prevImage + 1) % shuffledImages.length)
     }, 5000)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [shuffledImages])
+
+  if (shuffledImages.length === 0) {
+    return (
+      <div className="max-w-4xl mx-auto">
+        <div className="relative w-full" style={{ paddingTop: "75%" }}>
+          <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex items-center justify-center">
+            <div className="text-gray-500">Loading images...</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="max-w-4xl mx-auto">
       <div className="relative w-full" style={{ paddingTop: "75%" }}>
-        {images.map((src, index) => (
+        {shuffledImages.map((src, index) => (
           <div
             key={src}
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
